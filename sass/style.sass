@@ -1,0 +1,629 @@
+@import reset
+@import variables
+@import mixins
+@import bourbon/bourbon
+
+// *****general styles*****
+
+body
+	font-family: 'Josefin Sans'
+	+font(62.5%, #444444, normal)
+	line-height: 1.3
+
+a
+	text-decoration: none
+	font-size: 14px
+	color: #000000
+
+.btn-style
+	background: #fcb95b
+	background: -moz-linear-gradient(top,  #fcb95b 0%, #fbaa3b 100%)
+	background: -webkit-linear-gradient(top,  #fcb95b 0%,#fbaa3b 100%)
+	background: linear-gradient(to bottom,  #fcb95b 0%,#fbaa3b 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcb95b', endColorstr='#fbaa3b',GradientType=0 )
+
+	-webkit-box-shadow: 0px 17px 25px 0px rgba(254, 172, 58, 0.4)
+	-moz-box-shadow:    0px 17px 25px 0px rgba(254, 172, 58, 0.4)
+	box-shadow:         0px 17px 25px 0px rgba(254, 172, 58, 0.4)
+	
+	display: block
+	+radius(50px)
+	text-align: center
+
+.title-banner
+	+font(60px, $color2, bold)
+	@media screen and (max-width: 600px)
+		font-size: 40px
+
+.text-banner
+	+font(20px, $color2, normal)
+
+.btn-banner
+	+font(18px, $colorW, normal)
+	@extend .btn-style
+	
+.title-div
+	text-align: center
+	+font(40px, $color3, bold)
+	letter-spacing: -2px
+	@media screen and (max-width: 600px)
+		font-size: 30px
+
+.title-text
+	+font(20px, $color3, bold)
+
+.text
+	+font(18px, $color2, normal)
+
+.title-div-w
+	+font(32px, $colorW, bold)
+	@media screen and (max-width: 600px)
+		font-size: 25px
+
+.text-w
+	+font(18px, $colorW, normal)
+
+.title-text-2
+	+font(32px, $color4, normal)
+
+.text-2
+	+font(18px, $color5, normal)
+
+.btn
+	+font(14px, $colorW, bold)
+	@extend .btn-style
+
+.title-form
+	text-align: center
+	+font(32px, $colorW, normal)
+
+.text-form
+	text-align: center
+	+font(18px, $colorW, normal)
+
+.text-form-2
+	+font(16px, $color2, normal)
+
+.form-submit
+	+font(18px, $colorW, normal)
+
+.text-it
+	+font(14px, $color9, normal)
+	line-height: 26px
+
+.text-3
+	+font(14px, $color10, normal)
+	text-align: center
+
+.flex-wrap
+	+display(flex)
+	+flex-direction(row)
+	+justify-content(space-between)
+
+.flex-wrap2
+	+display(flex)
+	+flex-direction(row)
+	+justify-content(space-between)
+	+flex-wrap(wrap)
+
+.flex-wrap3
+	+display(flex)
+	+align-items(center)
+	+justify-content(center)
+
+// *****styles*****
+
+.container
+	width: 100%
+	max-width: 1164px
+	margin: 0 auto
+
+// *****header*****
+
+header
+	padding: 7px 0px
+	@media screen and (max-width: 600px)
+		padding: 10px 0px
+	.container
+		@extend .flex-wrap
+		@media screen and (max-width: 600px)
+			display: block
+		.logo
+			+font(25px, $color1, normal)
+			margin: 0px 0px 0px 54px
+			@media screen and (max-width: 600px)
+				margin: 0 auto 20px
+				width: 39px
+				display: block
+				
+
+.header-menu
+	@extend .flex-wrap
+	padding: 19px 48px 0px 0px
+	@media screen and (max-width: 600px)
+		padding: 0 20px
+	@media screen and (max-width: 330px)
+		display: block
+		text-align: center
+	li
+		padding: 0px 7px
+		@media screen and (max-width: 330px)
+			margin-bottom: 5px
+		a
+			+font(14px, $color1, bold)
+			text-transform: uppercase
+			padding: 0px 5px
+			&:hover
+				color: $color7
+						
+// *****banner*****
+
+.banner
+	padding: 152px 0px
+	@media screen and (max-width: 1100px)
+		padding: 100px 0px
+	@media screen and (max-width: 850px)
+		padding: 50px 0px
+	@media screen and (max-width: 600px)
+		padding: 30px 0px
+	.container
+		@extend .flex-wrap
+		@media screen and (max-width: 950px)
+			display: block
+		.img-banner
+			padding: 142px 0px 0px 221px
+			width: 50%
+			@media screen and (max-width: 1100px)
+				width: 40%
+			@media screen and (max-width: 950px)
+				width: 90%
+				padding: 0
+				margin: 0px auto 20px
+				+display(flex)
+				+align-items(center)
+				+justify-content(center)
+		.info-banner
+			width: 50%
+			max-width: 565px
+			@media screen and (max-width: 1100px)
+				width: 60%
+			@media screen and (max-width: 950px)
+				width: 90%
+				padding: 0
+				margin: 0px auto
+				text-align: center
+			.title-banner
+				letter-spacing: -3px
+				line-height: 75px
+				margin-bottom: 32px
+			.text-banner
+				margin-bottom: 36px
+				line-height: 27px
+			.btn-banner
+				width: 235px
+				height: 57px
+				padding-top: 13px
+				&:hover
+					color: $color1
+				@media screen and (max-width: 950px)
+					margin: 0 auto
+				
+// *****features*****
+
+.features
+	padding: 124px 0px 115px
+	@media screen and (max-width: 1100px)
+		padding: 100px 0px
+	@media screen and (max-width: 950px)
+		padding: 50px 0px
+	.title-div
+		margin-bottom: 97px
+		@media screen and (max-width: 1100px)
+			margin-bottom: 70px
+		@media screen and (max-width: 950px)
+			margin-bottom: 50px
+	.wrap-block
+		@extend .flex-wrap
+		@media screen and (max-width: 1100px)
+			padding: 0px 20px
+		@media screen and (max-width: 950px)
+			display: block
+		.info-block
+			margin-bottom: 46px
+			@media screen and (max-width: 700px)
+				margin-bottom: 30px
+			.ic-img
+				display: block
+				margin-bottom: 6px
+			.title-text
+				margin-bottom: 10px
+			.text
+				line-height: 20px
+		.left-block
+			width: 365px
+			@media screen and (max-width: 1100px)
+				width: 360px
+			@media screen and (max-width: 950px)
+				+display(flex)
+				+flex-direction(row)
+				+justify-content(space-between)
+				width: 100%
+				margin-bottom: 20px
+			@media screen and (max-width: 700px)
+				display: block
+				text-align: center
+		.center-block
+			width: 250px
+			padding: 165px 0px 0px 65px
+			@media screen and (max-width: 950px)
+				margin: 0 auto 30px
+				padding: 0
+				+display(flex)
+				+align-items(center)
+				+justify-content(center)
+		.right-block
+			width: 365px
+			@media screen and (max-width: 1100px)
+				width: 360px
+			@media screen and (max-width: 950px)
+				+display(flex)
+				+flex-direction(row)
+				+justify-content(space-between)
+				width: 100%
+				margin-bottom: 20px
+			@media screen and (max-width: 700px)
+				display: block
+				text-align: center
+			
+// *****benefit*****
+
+.benefit
+	padding: 202px 0px 231px
+	background: $color7
+	@media screen and (max-width: 1100px)
+		padding: 150px 0px
+	@media screen and (max-width: 950px)
+		padding: 100px 0px
+	@media screen and (max-width: 700px)
+		padding: 50px 0px
+	.container
+		@extend .flex-wrap
+		@media screen and (max-width: 950px)
+			display: block
+		.img-benefit
+			width: 50%
+			padding: 61px 0px 0px 223px
+			@media screen and (max-width: 1100px)
+				width: 40%
+			@media screen and (max-width: 950px)
+				width: 100%
+				+display(flex)
+				+align-items(center)
+				+justify-content(center)
+				padding: 0
+				margin-bottom: 20px
+		.info-benefit
+			width: 50%
+			max-width: 564px
+			@media screen and (max-width: 1100px)
+				width: 60%
+			@media screen and (max-width: 950px)
+				width: 100%
+				margin: 0 auto
+				text-align: center
+			@media screen and (max-width: 330px)
+				padding: 0 10px
+			.title-div-w
+				line-height: 48px
+				letter-spacing: -2px
+				margin-bottom: 15px
+			.text-w
+				line-height: 26px
+
+// *****choose*****
+
+.choose
+	background: $colorW
+	padding: 90px 0px 84px
+	@media screen and (max-width: 1100px)
+		padding: 70px 0px
+	@media screen and (max-width: 700px)
+		padding: 50px 0px
+	@media screen and (max-width: 600px)
+		padding: 30px 0px
+	.title-div
+		margin-bottom: 193px
+		@media screen and (max-width: 1100px)
+			margin-bottom: 100px
+		@media screen and (max-width: 950px)
+			margin-bottom: 50px
+	.wrap-choose
+		@extend .flex-wrap
+		margin-bottom: 221px
+		@media screen and (max-width: 1100px)
+			margin-bottom: 100px
+		@media screen and (max-width: 950px)
+			display: block
+		@media screen and (max-width: 700px)
+			margin-bottom: 50px
+		.img-choose
+			width: 50%
+			padding: 53px 0px 0px 223px
+			@media screen and (max-width: 1100px)
+				width: 40%
+			@media screen and (max-width: 950px)
+				width: 100%
+				+display(flex)
+				+align-items(center)
+				+justify-content(center)
+				padding: 0
+				margin-bottom: 20px
+		.info-choose
+			width: 50%
+			max-width: 564px
+			@media screen and (max-width: 1100px)
+				width: 60%
+				padding: 0px 20px
+			@media screen and (max-width: 950px)
+				width: 100%
+				margin: 0 auto
+				text-align: center
+			.title-text-2
+				line-height: 45px
+				letter-spacing: -1.4px
+				margin-bottom: 20px
+			.text-2
+				line-height: 26px
+				margin-bottom: 19px
+			.btn
+				width: 199px
+				height: 45px
+				padding-top: 11px
+				text-transform: uppercase
+				&:hover
+					color: $color1
+				@media screen and (max-width: 950px)
+					margin: 0 auto
+	.wrap-choose-2
+		padding-left: 3px
+		margin-bottom: 0
+		.info-choose
+			@media screen and (max-width: 950px)
+				margin-bottom: 50px
+		.img-choose
+			padding: 52px 0px 0px 238px
+			@media screen and (max-width: 950px)
+				padding: 0
+
+// *****checkout*****
+
+.checkout
+	padding: 126px 0px 225px
+	@media screen and (max-width: 1100px)
+		padding: 70px 0px
+	@media screen and (max-width: 700px)
+		padding: 50px 0px
+	@media screen and (max-width: 600px)
+		padding: 30px 0px
+	.title-div
+		margin-bottom: 154px
+		@media screen and (max-width: 1100px)
+			margin-bottom: 100px
+		@media screen and (max-width: 700px)
+			margin-bottom: 50px
+	.wrap-checkout
+		@extend .flex-wrap3
+		padding-left: 46px
+		@media screen and (max-width: 700px)
+			padding: 0
+			display: block
+		.checkout-block
+			position: relative
+			cursor: pointer
+			margin: 0px 83px
+			@media screen and (max-width: 1100px)
+				margin: 0px 40px
+			@media screen and (max-width: 850px)
+				margin: 0px 20px
+			@media screen and (max-width: 700px)
+				width: 126px
+				margin: 0 auto 20px
+			.loupe
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 52px
+				height: 53px
+				background: $color7 url(../images/ic-loupe.png) 0px 0px no-repeat
+				margin-left: -26px
+				margin-top: -26px
+				+radius(50%)
+				display: none
+			&:hover
+				.loupe
+					display: block
+					
+// *****form*****
+
+.form
+	padding: 90px 0px 94px
+	background: $color8 url(../images/bg-form.png) center no-repeat
+	@media screen and (max-width: 600px)
+		padding: 30px 0px
+	.title-form
+		margin-bottom: 16px
+		letter-spacing: -2px
+	.text-form
+		margin-bottom: 36px
+		letter-spacing: -0.6px
+		@media screen and (max-width: 600px)
+			padding: 0 20px
+	.form-box
+		width: 550px
+		margin: 0 auto
+		position: relative
+		@media screen and (max-width: 600px)
+			width: 95%
+		@media screen and (max-width: 330px)
+			position: static
+		input[type="text"]
+			box-sizing: border-box
+			border: none
+			padding: 0px 16px 8px 16px
+
+			width: 100%
+			max-width: 400px
+			height: 53px
+
+			-webkit-border-top-left-radius: 50px
+			-webkit-border-bottom-left-radius: 50px
+			-moz-border-radius-topleft: 50px
+			-moz-border-radius-bottomleft: 50px
+			border-top-left-radius: 50px
+			border-bottom-left-radius: 50px
+
+			font-family: 'Josefin Sans'
+			@extend .text-form-2
+			letter-spacing: -1px
+			
+			@media screen and (max-width: 600px)
+				padding-right: 20px
+			@media screen and (max-width: 500px)
+				max-width: 290px
+			@media screen and (max-width: 330px)
+				margin-bottom: 20px
+				+radius(50px)
+
+		input::-webkit-input-placeholder
+			font-size: 16px
+			color: #b3b3b3
+		input::-moz-placeholder
+			font-size: 16px
+			color: #b3b3b3
+		input:-moz-placeholder
+			font-size: 16px
+			color: #b3b3b3
+		input:-ms-input-placeholder
+			font-size: 16px
+			color: #b3b3b3
+
+		input[type="submit"]
+			box-sizing: border-box
+			border: none
+			padding: 0px 0px 9px 0px
+
+			width: 157px
+			height: 53px
+
+
+			position: absolute
+			top: 0
+			right: 0
+			
+			-webkit-border-top-right-radius: 50px
+			-webkit-border-bottom-right-radius: 50px
+			-moz-border-radius-topright: 50px
+			-moz-border-radius-bottomright: 50px
+			border-top-right-radius: 50px
+			border-bottom-right-radius: 50px
+			
+			font-family: 'Josefin Sans'
+			@extend .form-submit
+			letter-spacing: -1px
+			
+			background: #fcb95b
+			background: -moz-linear-gradient(top,  #fcb95b 0%, #fbaa3b 100%)
+			background: -webkit-linear-gradient(top,  #fcb95b 0%,#fbaa3b 100%)
+			background: linear-gradient(to bottom,  #fcb95b 0%,#fbaa3b 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcb95b', endColorstr='#fbaa3b',GradientType=0 )
+
+			-webkit-box-shadow: 0px 17px 25px 0px rgba(254, 172, 58, 0.4)
+			-moz-box-shadow:    0px 17px 25px 0px rgba(254, 172, 58, 0.4)
+			box-shadow:         0px 17px 25px 0px rgba(254, 172, 58, 0.4)
+			&:hover
+				color: $color1
+			
+			@media screen and (max-width: 330px)
+				position: relative
+				+radius(50px)
+				left: 50%
+				margin-left: -80px
+
+// *****review*****
+
+.review
+	padding: 90px 0px 104px
+	@media screen and (max-width: 700px)
+		padding: 50px 0px
+	.title-div
+		margin-bottom: 101px
+		@media screen and (max-width: 700px)
+			margin-bottom: 50px
+	.wrap-review
+		@extend .flex-wrap
+		margin-bottom: 113px
+		@media screen and (max-width: 700px)
+			display: block
+			margin-bottom: 50px
+		.review-block
+			width: 33%
+			max-width: 365px
+			@media screen and (max-width: 700px)
+				margin: 0 auto 20px
+				width: 60%
+			@media screen and (max-width: 330px)
+				width: 95%
+			.ic-commas
+				margin: 0 auto 20px
+				width: 37px
+				height: 31px
+			.text-it
+				margin-bottom: 40px
+				text-align: center
+				padding: 0px 17px
+			.photo
+				+radius(50%)
+				overflow: hidden
+				width: 53px
+				height: 53px
+				margin: 0px auto 3px
+				background: $color9
+				@extend .flex-wrap3
+			.title-text
+				margin-bottom: 5px
+				text-align: center
+				letter-spacing: -1px
+			.text-3
+				letter-spacing: -1px
+	.btn-review
+		@extend .btn-banner
+		width: 257px
+		height: 57px
+		margin: 0 auto
+		padding-top: 16px
+		letter-spacing: -1px
+		&:hover
+			color: $color1
+
+// *****footer*****
+
+footer
+	padding: 53px 0px 58px
+	background: $color11
+	.logo
+		+font(16px, $color12, normal)
+		text-align: center
+		display: block
+		margin-bottom: 21px
+	.footer-menu
+		width: 320px
+		margin: 0px auto 23px
+		padding: 0
+		@media screen and (max-width: 330px)
+			width: 95%
+	.text-footer
+		+font(16px, $color6, normal)
+		text-align: center
+			
+		
+
